@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import {
   AppLayout,
   Homepage,
@@ -7,7 +7,7 @@ import {
   Pricing,
   Product,
 } from "./pages";
-import { CityList, CountriesList } from "./components";
+import { City, CityList, CountriesList, Form } from "./components";
 import { useEffect, useState } from "react";
 
 const BASE_URL = "http://localhost:8000";
@@ -37,24 +37,22 @@ const App = () => {
     <div>
       <Routes>
         <Route index element={<Homepage />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/pricing" element={<Pricing />} />
-        <Route path="/app" element={<AppLayout />}>
-          <Route
-            index
-            element={<CityList cities={cities} loading={loading} />}
-          />
+        <Route path="product" element={<Product />} />
+        <Route path="pricing" element={<Pricing />} />
+        <Route path="app" element={<AppLayout />}>
+          <Route index element={<Navigate replace to="cities" />} />
           <Route
             path="cities"
             element={<CityList cities={cities} loading={loading} />}
           />
+          <Route path="cities/:id" element={<City />} />
           <Route
             path="countries"
             element={<CountriesList cities={cities} loading={loading} />}
           />
-          <Route path="form" element={<p>Form</p>} />
+          <Route path="form" element={<Form />} />
         </Route>
-        <Route path="/login" element={<Login />} />
+        <Route path="login" element={<Login />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>

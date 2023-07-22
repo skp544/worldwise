@@ -9,6 +9,9 @@ import CityItem from "./CityItem/CityItem";
 import Message from "./Message/Message";
 import CountriesList from "./CountriesList/CountriesList";
 import CountryItem from "./CountryItem/CountryItem";
+import City from "./City/City";
+import Form from "./Form/Form";
+import Button from "./Button/Button";
 
 export {
   PageNav,
@@ -22,4 +25,7 @@ export {
   Message,
   CountriesList,
   CountryItem,
+  City,
+  Form,
+  Button,
 };
