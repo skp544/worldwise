@@ -12,6 +12,7 @@ import CountryItem from "./CountryItem/CountryItem";
 import City from "./City/City";
 import Form from "./Form/Form";
 import Button from "./Button/Button";
+import BackButton from "./BackButton/BackButton";
 
 export {
   PageNav,
@@ -28,4 +29,5 @@ export {
   City,
   Form,
   Button,
+  BackButton,
 };

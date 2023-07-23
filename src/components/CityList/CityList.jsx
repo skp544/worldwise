@@ -1,7 +1,10 @@
 import { CityItem, Message, Spinner } from "../";
+import { useCities } from "../../contexts/CitiesContext";
 import styles from "./CityList.module.css";
 
-const CityList = ({ cities, loading }) => {
+const CityList = () => {
+  const { cities, loading } = useCities();
+
   if (loading) return <Spinner />;
 
   if (!cities.length)
