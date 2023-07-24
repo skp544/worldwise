@@ -13,6 +13,7 @@ import City from "./City/City";
 import Form from "./Form/Form";
 import Button from "./Button/Button";
 import BackButton from "./BackButton/BackButton";
+import User from "./User/User";
 
 export {
   PageNav,
@@ -30,4 +31,5 @@ export {
   Form,
   Button,
   BackButton,
+  User,
 };
